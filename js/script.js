@@ -1,12 +1,13 @@
-// My web app's Firebase configuration
+// Our web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyDn5tZ0m5Yn52mOn0HnxQARP_whYZv0KcU",
-  authDomain: "fir-js-8f792.firebaseapp.com",
-  projectId: "fir-js-8f792",
-  storageBucket: "fir-js-8f792.appspot.com",
-  messagingSenderId: "520659113418",
-  appId: "1:520659113418:web:1c277d88caeb33ec62eb33",
-  databaseURL: "https://fir-js-8f792-default-rtdb.asia-southeast1.firebasedatabase.app"
+  apiKey: "AIzaSyAi-uKONBNpQYYlI4YzmmnDAxrYVzvjCRQ",
+  authDomain: "devl-78f1c.firebaseapp.com",
+  projectId: "devl-78f1c",
+  storageBucket: "devl-78f1c.appspot.com",
+  messagingSenderId: "427527821339",
+  appId: "1:427527821339:web:a05dd1cb8e512c6733c0be",
+  databaseURL: "https://devl-78f1c-default-rtdb.firebaseio.com/",
+  measurementId: "G-32W7ZRJ39V"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -20,10 +21,11 @@ ref.on('value', function(snapshot)
   LN_number = Object.keys(snapshot.val()).length;
   // console.log(Object.keys(snapshot.val()).length);
   // console.log(Object.keys(snapshot.val())[1]);
-  for (let i = 0; i < LN_number; i++)
+  /*for (let i = 0; i < LN_number; i++)
   {
     document.getElementById('ln-div').innerHTML += "<div>" + Object.keys(snapshot.val())[i] + "</div>";
-  }
+  }*/
+  console.log(LN_number);
 });
 
-document.getElementById('ln-div').innerHTML = "";
+// document.getElementById('ln-div').innerHTML = "";
