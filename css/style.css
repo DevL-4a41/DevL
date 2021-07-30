@@ -1,56 +1,98 @@
-.container
-{
-  background-color: lightcoral;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  flex-flow: wrap column;
-  height: 300px;
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,700,900&display=swap');
+
+body {
+	background-color: black;
+	color: white;
+	font-family: 'poppins', 'sans-serif';
+	font-size: 100%;
 }
 
-.container #ln-div
-{
-  background-color: lightseagreen;
-  margin-top: 10px;
-  padding: 10px;
+header {
+	padding-top: 10%;
+	font-size: 3rem;
+	text-align: center;
+	clear: both;
 }
 
-.container > div:nth-child(1)
-{
-  font-size: 3rem;
-  font-weight: bold;
-  color: black;
-  text-align: center;
-  float: left;
-  clear: left;
+footer {
+	clear: both;
+	padding-top: 40px;
+	text-align: center;
 }
 
-.container div a:link
-{
-  text-decoration: none !important;
-  color: yellow;
+/* LN CONTENTS START */
+#container {
+	padding: 4% 2%;
+	width: 85%;
+	height: 100%;
+	margin: auto;
 }
 
-.container div a:visited
-{
-  color: cyan;
+.ln-container {
+	float: left;
+	width: 46%;
+	height: 64%;
+	border: 2px solid white;
+	border-radius: 1em;
+	margin-top: 5%;
 }
 
-.container div a:hover
-{
-  text-decoration: none !important;
-  color: black;
-  cursor:pointer;
+.ln-container:nth-child(2n) {
+	clear: right;
+	margin-left: 5%;
 }
 
-.container div a:active
-{
-  color: cyan;
+.ln-cover {
+	display: block;
+	width:95%;
+	height: 20%;
+	margin-top: 2.5%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid red;
+	border-radius: 1.2em;
 }
 
-.container #ln-div div
-{
-  background-color: crimson;
-  margin-top: 10px;
-  padding: 10px;
+.ln-name {
+	text-align: center;
 }
+/* LN CONTENTS END */
+
+/* NAVIGATION START */
+nav > ul {
+	list-style-type: none;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height:50px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+nav > ul > li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+
+nav > ul > li:last-child {
+	border-right: none;
+}
+
+nav > ul > li > a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav > ul > li a:hover:not(.active) {
+	background-color: #111;
+}
+
+.active {
+	background-color: #04AA6D;
+}
+/* NAVIGATION END*/
