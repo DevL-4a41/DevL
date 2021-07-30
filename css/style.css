@@ -25,15 +25,25 @@
   clear: left;
 }
 
-.container div a
+.container div a:link
 {
   text-decoration: none !important;
   color: yellow;
 }
 
+.container div a:visited
+{
+  color: cyan;
+}
+
 .container div a:hover
 {
   text-decoration: none !important;
-  color: cyan;
+  color: black;
   cursor:pointer;
+}
+
+.container div a:active
+{
+  color: cyan;
 }
