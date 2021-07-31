@@ -61,6 +61,7 @@ footer {
 }
 
 .ln-name {
+	colir: black;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	text-align: center;
@@ -110,7 +111,17 @@ nav>ul>li a:hover:not(.active) {
 
 /* NAVIGATION END*/
 
-/* SUPPORT FOR DIFFERENT SCREEN SIZES START*/     
+/* SUPPORT FOR DIFFERENT SCREEN SIZES START*/  
+@media screen and (orientation: landscape) {
+	.ln-container {
+		width: 30%;
+	}
+	
+	.ln-cover {
+		aspect-ratio: 1/1.4;
+	}
+}
+
 @media screen and (max-width: 500px) {
 	header {
 		font-size: 2rem;
@@ -134,5 +145,4 @@ nav>ul>li a:hover:not(.active) {
 		max-height: 3rem;
 	}
 }
-
 /* SUPPORT FOR DIFFERENT SCREEN SIZES END*/
