@@ -17,15 +17,13 @@ const db = firebase.database();
 var ref, LN_number;
 ref = db.ref('LN/');
 ref.on('value', function(snapshot)
-{
+{/*
   LN_number = Object.keys(snapshot.val()).length;
   // console.log(Object.keys(snapshot.val()).length);
   // console.log(Object.keys(snapshot.val())[1]);
-  /*for (let i = 0; i < LN_number; i++)
-  {
-    document.getElementById('ln-div').innerHTML += "<div>" + Object.keys(snapshot.val())[i] + "</div>";
-  }*/
-  console.log(LN_number);
+
+
+
 });
 
 // document.getElementById('ln-div').innerHTML = "";
