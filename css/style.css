@@ -1,145 +1,171 @@
-@font-face {
-	font-family: poppins;
-	src: url("/fonts/Poppins.ttf");
+@font-face
+{
+  font-family: poppins;
+  src: url("/fonts/Poppins.ttf");
 }
 
-body {
-	background-color: black;
-	color: white;
-	font-family: poppins, cursive;
-	font-size: 100%;
+body
+{
+  background-color: black;
+  color: white;
+  font-family: poppins, cursive;
+  font-size: 100%;
 }
 
-header {
+header
+{
   padding-top: 60px;
-	font-size: 4rem;
-	text-align: center;
-	clear: both;
+  font-size: 4rem;
+  text-align: center;
+  clear: both;
 }
 
-footer {
-	clear: both;
-	font-size: 3rem;
-	padding-top: 40px;
-	text-align: center;
+footer
+{
+  clear: both;
+  font-size: 3rem;
+  padding-top: 40px;
+  text-align: center;
 }
 
 /* LN CONTENTS START */
-#container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding: 2% 2%;
-	width: 90%;
-	height: 100%;
-	margin: auto;
+#container
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2% 2%;
+  width: 90%;
+  height: 100%;
+  margin: auto;
 }
 
-.ln-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	
-	width: 46%;
-	height: 64%;
-	border-radius: 1em;
-	margin-top: 5%;
+.ln-container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 46%;
+  height: 64%;
+  border-radius: 1em;
+  margin-top: 5%;
 }
 
-.ln-cover {
-	display: block;
-	width: 95%;
-	height: auto;
-	aspect-ratio: 1 / 1.5;
-	margin-top: 2.5%;
-	border-radius: 1em;
+.ln-cover
+{
+  display: block;
+  width: 95%;
+  height: auto;
+  aspect-ratio: 1/1.5;
+  margin-top: 2.5%;
+  border-radius: 1em;
 }
 
-.ln-name {
-	colir: black;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	text-align: center;
-	min-height: 2rem;
-	max-height: 4rem;
+.ln-name
+{
+  color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  min-height: 2rem;
+  max-height: 4rem;
 }
+
 /* LN CONTENTS END */
 
 /* NAVIGATION START */
-nav>ul {
-	list-style-type: none;
-	position: fixed;
-	top: 0px;
-	width: 100%;
-	height: 50px;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
+nav>ul
+{
+  list-style-type: none;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-nav>ul>li {
-	float: left;
-	border-right: 1px solid #bbb;
-	margin-bottom: 50px;
+nav>ul>li
+{
+  float: left;
+  border-right: 1px solid #bbb;
+  margin-bottom: 50px;
 }
 
-nav>ul>li:last-child {
-	border-right: none;
+nav>ul>li:last-child
+{
+  border-right: none;
 }
 
-nav>ul>li>a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+nav>ul>li>a
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-nav>ul>li a:hover:not(.active) {
-	background-color: #111;
+nav>ul>li a:hover:not(.active)
+{
+  background-color: #111;
 }
 
-.active {
-	background-color: #04AA6D;
+.active
+{
+  background-color: #04AA6D;
 }
 
 /* NAVIGATION END*/
 
-/* SUPPORT FOR DIFFERENT SCREEN SIZES START*/  
-@media screen and (orientation: landscape) {
-	.ln-container {
-		width: 30%;
-	}
-	
-	.ln-cover {
-		aspect-ratio: 1/1.4;
-	}
+/* SUPPORT FOR DIFFERENT SCREEN SIZES START*/
+@media screen and (orientation: landscape)
+{
+  .ln-container
+  {
+    width: 30%;
+  }
+
+  .ln-cover
+  {
+    aspect-ratio: 1/1.4;
+  }
 }
 
-@media screen and (max-width: 500px) {
-	header {
-		font-size: 2rem;
-	}
-	
-	footer {
-		font-size: 1.4rem;
-	}
-	
-	.ln-container {
-		border-radius: 0.5rem;
-	}
-	
-	.ln-cover {
-		border-radius: 0.5rem;
-	}
-	
-	.ln-name {
-		font-size: 0.5rem;
-		min-height: 1.5rem;
-		max-height: 3rem;
-	}
+@media screen and (max-width: 500px)
+{
+  header
+  {
+    font-size: 2rem;
+  }
+
+  footer
+  {
+    font-size: 1.4rem;
+  }
+
+  .ln-container
+  {
+    border-radius: 0.5rem;
+  }
+
+  .ln-cover
+  {
+    border-radius: 0.5rem;
+  }
+
+  .ln-name
+  {
+    font-size: 0.5rem;
+    min-height: 1.5rem;
+    max-height: 3rem;
+    color: white;
+  }
 }
+
 /* SUPPORT FOR DIFFERENT SCREEN SIZES END*/
