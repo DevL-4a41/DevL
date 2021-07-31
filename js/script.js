@@ -14,16 +14,22 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
 // database reference
-var ref, LN_number;
+var ref, LN_number, LN_name;
 ref = db.ref('LN/');
 ref.on('value', function(snapshot)
-{/*
+{
   LN_number = Object.keys(snapshot.val()).length;
   // console.log(Object.keys(snapshot.val()).length);
   // console.log(Object.keys(snapshot.val())[1]);
-
-
-
+  
+  for (let i = 0; i < LN_number; i++)
+  {
+    LN_name = Object.keys(snapshot.val())[i];
+    document.querySelectorAll(".ln-name")[i].innerHTML = LN_name;
+    ref = db.ref('LN/'+LN_name+"/1");
+    ref.on('value', function(snapshot)
+    {
+      document.querySelectorAll(".ln-cover")[i].src = snapshot.val().CoverLink;
+    });
+  }
 });
-
-// document.getElementById('ln-div').innerHTML = "";
