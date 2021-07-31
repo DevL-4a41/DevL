@@ -1,86 +1,98 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,700,900&display=swap');
+@font-face {
+	font-family: poppins;
+	src: url("/fonts/Poppins.ttf");
+}
 
 body {
 	background-color: black;
 	color: white;
-	font-family: 'poppins', 'sans-serif';
+	font-family: poppins, cursive;
 	font-size: 100%;
 }
 
 header {
-	padding-top: 10%;
-	font-size: 3rem;
+  padding-top: 60px;
+	font-size: 4rem;
 	text-align: center;
 	clear: both;
 }
 
 footer {
 	clear: both;
+	font-size: 3rem;
 	padding-top: 40px;
 	text-align: center;
 }
 
 /* LN CONTENTS START */
 #container {
-	padding: 4% 2%;
-	width: 85%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 2% 2%;
+	width: 90%;
 	height: 100%;
 	margin: auto;
 }
 
 .ln-container {
-	float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
 	width: 46%;
 	height: 64%;
-	border: 2px solid white;
+	border: 2px solid #ddddddaa;
+	box-shadow: 0 0 12px #eeeeeeaa;
+	background-color: #dddddd55;
 	border-radius: 1em;
 	margin-top: 5%;
 }
 
-.ln-container:nth-child(2n) {
-	clear: right;
-	margin-left: 5%;
-}
-
 .ln-cover {
 	display: block;
-	width:95%;
-	height: 20%;
+	width: 95%;
+	height: auto;
+	aspect-ratio: 1 / 1.5;
 	margin-top: 2.5%;
-	margin-left: auto;
-	margin-right: auto;
-	border: 1px solid red;
-	border-radius: 1.2em;
+	border-radius: 1em;
 }
 
 .ln-name {
+	padding-top: 1%;
+	padding-bottom: 1%;
 	text-align: center;
+	min-height: 2rem;
+	max-height: 4rem;
 }
 /* LN CONTENTS END */
 
 /* NAVIGATION START */
-nav > ul {
+nav>ul {
 	list-style-type: none;
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	height:50px;
+	height: 50px;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	background-color: #333;
 }
 
-nav > ul > li {
+nav>ul>li {
 	float: left;
 	border-right: 1px solid #bbb;
+	margin-bottom: 50px;
 }
 
-nav > ul > li:last-child {
+nav>ul>li:last-child {
 	border-right: none;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
 	display: block;
 	color: white;
 	text-align: center;
@@ -88,11 +100,39 @@ nav > ul > li > a {
 	text-decoration: none;
 }
 
-nav > ul > li a:hover:not(.active) {
+nav>ul>li a:hover:not(.active) {
 	background-color: #111;
 }
 
 .active {
 	background-color: #04AA6D;
 }
+
 /* NAVIGATION END*/
+
+/* SUPPORT FOR DIFFERENT SCREEN SIZES START*/     
+@media screen and (max-width: 500px) {
+	header {
+		font-size: 2rem;
+	}
+	
+	footer {
+		font-size: 1.4rem;
+	}
+	
+	.ln-container {
+		border-radius: 0.5rem;
+	}
+	
+	.ln-cover {
+		border-radius: 0.5rem;
+	}
+	
+	.ln-name {
+		font-size: 0.5rem;
+		min-height: 1.5rem;
+		max-height: 3rem;
+	}
+}
+
+/* SUPPORT FOR DIFFERENT SCREEN SIZES END*/
