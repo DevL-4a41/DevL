@@ -27,6 +27,7 @@ ref.on('value', function(snapshot)
     LN_name = Object.keys(snapshot.val())[i];
     document.querySelectorAll(".ln-name")[i].innerHTML = LN_name;
     ref = db.ref('LN/'+LN_name+"/1");
+    
     ref.on('value', function(snapshot)
     {
       document.querySelectorAll(".ln-cover")[i].src = snapshot.val().CoverLink;
