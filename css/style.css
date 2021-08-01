@@ -18,6 +18,7 @@ header
   font-size: 4rem;
   text-align: center;
   clear: both;
+  text-shadow: 0px 0px 10px #ddaaaaff;
 }
 
 footer
@@ -82,6 +83,7 @@ footer
 /* NAVIGATION START */
 nav>ul
 {
+  float: left;
   list-style-type: none;
   position: fixed;
   top: 0px;
@@ -89,6 +91,7 @@ nav>ul
   height: 50px;
   margin: 0;
   padding: 0;
+  padding-left: 10%;
   overflow: hidden;
   background-color: #333;
 }
@@ -114,7 +117,7 @@ nav>ul>li>a
   text-decoration: none;
 }
 
-nav>ul>li a:hover:not(.active)
+nav>ul>li>a:hover:not(.active)
 {
   background-color: #111;
 }
@@ -123,7 +126,6 @@ nav>ul>li a:hover:not(.active)
 {
   background-color: #04AA6D;
 }
-
 /* NAVIGATION END*/
 
 /* SUPPORT FOR DIFFERENT SCREEN SIZES START*/
@@ -164,7 +166,7 @@ nav>ul>li a:hover:not(.active)
 
   .ln-name
   {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     min-height: 1.5rem;
     max-height: 3rem;
     color: white;
