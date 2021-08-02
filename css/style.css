@@ -173,4 +173,12 @@ nav>ul>li>a:hover:not(.active)
   }
 }
 
+@media only screen and (orientation: portrait)
+{
+  .ln-name
+  {
+    font-size: 0.6em;
+  }
+}
+
 /* SUPPORT FOR DIFFERENT SCREEN SIZES END*/
