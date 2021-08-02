@@ -33,4 +33,17 @@ ref.on('value', function(snapshot)
       document.querySelectorAll(".ln-cover")[i].src = snapshot.val().CoverLink;
     });
   }
+  
+  
+  let ln_elems = document.querySelectorAll(".ln-cover");
+  for (let i = 0; i < ln_elems.length; i++)
+  {
+    ln_elems[i].onclick = () =>
+    {
+      window.location.assign("./download_page.html");
+    }
+  }
+  
+  var LN_Data = Object.keys(snapshot.val())[2];
+  
 });
