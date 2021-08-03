@@ -1,5 +1,7 @@
+var dname,dvol;
 // Our web app's Firebase configuration
-var firebaseConfig = {
+var firebaseConfig =
+{
   apiKey: "AIzaSyAi-uKONBNpQYYlI4YzmmnDAxrYVzvjCRQ",
   authDomain: "devl-78f1c.firebaseapp.com",
   projectId: "devl-78f1c",
@@ -36,14 +38,23 @@ ref.on('value', function(snapshot)
   
   
   let ln_elems = document.querySelectorAll(".ln-cover");
+  let ln_names = document.querySelectorAll(".ln-name");
   for (let i = 0; i < ln_elems.length; i++)
   {
     ln_elems[i].onclick = () =>
     {
+      dname = ln_names[i].innerHTML;
+      localStorage.setItem('dname', dname);
+      ref = db.ref('LN/'+dname);
+      ref.on('value', function(snapshot)
+      {
+        dvol = Object.keys(snapshot.val()).length;
+        localStorage.setItem('dvol', dvol);
+      });
       window.location.assign("./download_page.html");
     }
   }
   
-  var LN_Data = Object.keys(snapshot.val())[2];
+  
   
 });
