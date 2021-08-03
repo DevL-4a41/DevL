@@ -1,5 +1,5 @@
 var dname,dvol;
-// Our web app's Firebase configuration
+// DevL's Firebase configuration
 var firebaseConfig =
 {
   apiKey: "AIzaSyAi-uKONBNpQYYlI4YzmmnDAxrYVzvjCRQ",
@@ -54,7 +54,4 @@ ref.on('value', function(snapshot)
       window.location.assign("./download_page.html");
     }
   }
-  
-  
-  
 });
