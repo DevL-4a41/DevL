@@ -47,7 +47,7 @@ for (let i = 0; i < dvol; i++)
     ref = db.ref('LN/' + dname + '/' + (i+1));
     ref.on('value', function(snapshot)
     {
-      window.location.assign(snapshot.val().DriveLink);
+      window.open(snapshot.val().DriveLink, "_blank");
     });
     
   }
